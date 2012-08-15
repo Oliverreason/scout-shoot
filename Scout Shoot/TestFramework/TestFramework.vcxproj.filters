@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="SimpleTest">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="SimpleTest\Shader">
+      <UniqueIdentifier>{42f15b8a-9b8e-4909-adf1-ed6670284be4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CubeTest">
+      <UniqueIdentifier>{2db76093-e0b3-45e7-a717-21750048456b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CubeTest\Shader">
+      <UniqueIdentifier>{4f89f90c-8bdd-4981-b626-28a26c27970b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LightingTest">
+      <UniqueIdentifier>{b0f1ef0b-67d7-4165-b67f-53dce8d74da3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LightingTest\Shader">
+      <UniqueIdentifier>{0d0090d1-22a0-4b1d-a629-5d73be93a0ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TextureTest">
+      <UniqueIdentifier>{900b7947-2aa4-4bde-b9c1-c20e08f9edeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TextureTest\Shader">
+      <UniqueIdentifier>{1b9726c5-93ec-4623-902b-366ae56cf231}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleTestGame.cpp">
+      <Filter>SimpleTest</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeTestGame.cpp">
+      <Filter>CubeTest</Filter>
+    </ClCompile>
+    <ClCompile Include="LightingTestGame.cpp">
+      <Filter>LightingTest</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureTestGame.cpp">
+      <Filter>TextureTest</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SimpleTestGame.h">
+      <Filter>SimpleTest</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeTestGame.h">
+      <Filter>CubeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="LightingTestGame.h">
+      <Filter>LightingTest</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureTestGame.h">
+      <Filter>TextureTest</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SimpleTestGameShader.fx">
+      <Filter>SimpleTest\Shader</Filter>
+    </None>
+    <None Include="CubeTestGameShader.fx">
+      <Filter>CubeTest\Shader</Filter>
+    </None>
+    <None Include="LightingTestGameShader.fx">
+      <Filter>LightingTest\Shader</Filter>
+    </None>
+    <None Include="TextureTestGameShader.fx">
+      <Filter>TextureTest\Shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>
