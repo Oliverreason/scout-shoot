@@ -86,6 +86,8 @@ void TextureTestGame::Draw( GameTime gameTime )
     GetGraphicsDevice()->GetDeviceContext()->UpdateSubresource(m_pCBChangesEveryFrame, 0, NULL, &cb, 0, 0);
     ID3DX11EffectConstantBuffer* pEffectCBuffer = m_pEffectTest->GetConstantBufferByName( "cbChangesEveryFrame" );
     pEffectCBuffer->SetConstantBuffer(m_pCBChangesEveryFrame);
+    ID3DX11EffectShaderResourceVariable* pTextureDiffuse = m_pEffectTest->GetVariableByName("txDiffuse")->AsShaderResource();
+    pTextureDiffuse->SetResource(m_pTextureRV);
     ID3DX11EffectSamplerVariable* pEffectSampler = m_pEffectTest->GetVariableByName( "samLinear" )->AsSampler();
     pEffectSampler->SetSampler(0, m_pSamplerLinear);
 
@@ -174,6 +176,8 @@ void TextureTestGame::LoadAndInitialEffect()
     bd.ByteWidth = sizeof(TextureTestGameCBNeverChanges);
     bd.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
     bd.CPUAccessFlags = 0;
+    bd.MiscFlags = 0;
+    bd.StructureByteStride = 0;
     HRESULT hr = GetGraphicsDevice()->GetDevice()->CreateBuffer( &bd, NULL, &m_pCBNeverChanges );
     if( FAILED( hr ) )
         return;
@@ -183,6 +187,11 @@ void TextureTestGame::LoadAndInitialEffect()
         return;
     bd.ByteWidth = sizeof(TextureTestGameCBChangesEveryFrame);
     hr = GetGraphicsDevice()->GetDevice()->CreateBuffer( &bd, NULL, &m_pCBChangesEveryFrame );
+    if( FAILED( hr ) )
+        return;
+
+    // Load the Texture
+    hr = D3DX11CreateShaderResourceViewFromFile( GetGraphicsDevice()->GetDevice(), L"seafloor.dds", NULL, NULL, &m_pTextureRV, NULL );
     if( FAILED( hr ) )
         return;
 
