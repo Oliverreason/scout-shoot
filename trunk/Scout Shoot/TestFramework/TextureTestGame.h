@@ -31,6 +31,7 @@ private:
     ID3D11Buffer* m_pCBNeverChanges;
     ID3D11Buffer* m_pCBChangeOnResize;
     ID3D11Buffer* m_pCBChangesEveryFrame;
+    ID3D11ShaderResourceView* m_pTextureRV;
     ID3D11SamplerState* m_pSamplerLinear;
     XMFLOAT4 m_f4MeshColor;
 };
