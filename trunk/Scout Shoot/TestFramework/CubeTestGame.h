@@ -1,5 +1,10 @@
 #pragma once
-#include "GameFrameworkHeader.h"
+#include "stdApp.h"
+
+#include "GameWin.h"
+
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 using namespace kXNA;
 

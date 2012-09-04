@@ -1,3 +1,5 @@
+#include "kXNA_Dll.h"
+#include "GameFrameworkExport.h"
 #include "ContentManager.h"
 #include "GraphicsDevice.h"
 

@@ -3,7 +3,7 @@
 
 namespace kXNA
 {
-    struct Color
+    struct _kXNA Color
     {
     public:
         Color(void);

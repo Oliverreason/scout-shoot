@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="SimpleTest">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
@@ -30,11 +26,14 @@
     <Filter Include="TextureTest\Shader">
       <UniqueIdentifier>{1b9726c5-93ec-4623-902b-366ae56cf231}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CameraAndInput">
+      <UniqueIdentifier>{c7b0eda2-dc23-4064-9fe3-877d07b587fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CameraAndInput\Shader">
+      <UniqueIdentifier>{457e7801-7f4c-4e6a-8233-ad804db9920f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameApp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SimpleTestGame.cpp">
       <Filter>SimpleTest</Filter>
     </ClCompile>
@@ -46,6 +45,13 @@
     </ClCompile>
     <ClCompile Include="TextureTestGame.cpp">
       <Filter>TextureTest</Filter>
+    </ClCompile>
+    <ClCompile Include="GameApp.cpp" />
+    <ClCompile Include="CameraInputGame.cpp">
+      <Filter>CameraAndInput</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>CameraAndInput</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +67,13 @@
     <ClInclude Include="TextureTestGame.h">
       <Filter>TextureTest</Filter>
     </ClInclude>
+    <ClInclude Include="CameraInputGame.h">
+      <Filter>CameraAndInput</Filter>
+    </ClInclude>
+    <ClInclude Include="stdApp.h" />
+    <ClInclude Include="Camera.h">
+      <Filter>CameraAndInput</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="SimpleTestGameShader.fx">
@@ -74,6 +87,9 @@
     </None>
     <None Include="TextureTestGameShader.fx">
       <Filter>TextureTest\Shader</Filter>
+    </None>
+    <None Include="CameraInputGame.fx">
+      <Filter>CameraAndInput\Shader</Filter>
     </None>
   </ItemGroup>
 </Project>

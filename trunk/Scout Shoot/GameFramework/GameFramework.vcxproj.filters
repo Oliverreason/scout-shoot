@@ -11,6 +11,9 @@
     <Filter Include="Framework\Content">
       <UniqueIdentifier>{cd4680f5-065b-48bf-873a-bcc57559d216}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Framework\Input">
+      <UniqueIdentifier>{5ae77d52-a513-4642-b160-be79edc97418}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameComponent.h">
@@ -31,9 +34,6 @@
     <ClInclude Include="Color.h">
       <Filter>Framework</Filter>
     </ClInclude>
-    <ClInclude Include="GameFrameworkHeader.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
     <ClInclude Include="VertexBuffer.h">
       <Filter>Framework\Graphics</Filter>
     </ClInclude>
@@ -51,6 +51,18 @@
     </ClInclude>
     <ClInclude Include="IndexBuffer.h">
       <Filter>Framework\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardState.h">
+      <Filter>Framework\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Framework\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="kXNA_Dll.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFrameworkExport.h">
+      <Filter>Framework</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +98,12 @@
     </ClCompile>
     <ClCompile Include="IndexBuffer.cpp">
       <Filter>Framework\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardState.cpp">
+      <Filter>Framework\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Framework\Input</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

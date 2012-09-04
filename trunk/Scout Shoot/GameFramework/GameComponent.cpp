@@ -1,9 +1,13 @@
+#include "kXNA_Dll.h"
+#include "GameFrameworkExport.h"
 #include "GameComponent.h"
 #include "GameTime.h"
+#include "GameWin.h"
 
 using namespace kXNA;
-GameComponent::GameComponent(void)
+GameComponent::GameComponent(GameWin* pGame)
 {
+    m_pGame = pGame;
 }
 
 
@@ -16,5 +20,9 @@ void GameComponent::Initialize()
 }
 
 void GameComponent::Update(GameTime gameTime)
+{
+}
+
+void GameComponent::Finalize()
 {
 }

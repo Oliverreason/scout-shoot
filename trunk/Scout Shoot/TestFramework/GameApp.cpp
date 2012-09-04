@@ -1,4 +1,5 @@
-#include "std.h"
+#include "stdApp.h"
+
 #include "SimpleTestGame.h"
 #include "CubeTestGame.h"
 #include "LightingTestGame.h"

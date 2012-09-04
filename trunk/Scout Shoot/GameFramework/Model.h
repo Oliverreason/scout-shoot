@@ -2,7 +2,7 @@
 
 namespace kXNA
 {
-    class Model
+    class _kXNA Model
     {
     public:
         Model(void);

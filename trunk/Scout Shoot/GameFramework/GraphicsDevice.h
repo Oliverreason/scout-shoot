@@ -7,7 +7,7 @@ namespace kXNA
     class VertexBuffer;
     class IndexBuffer;
 
-    class GraphicsDevice
+    class _kXNA GraphicsDevice
     {
         friend class ContentManager;
     public:
