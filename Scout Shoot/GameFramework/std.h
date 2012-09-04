@@ -20,5 +20,7 @@ typedef char tchar;
 #include <xnamath.h>
 #include <DxErr.h>
 #include <D3Dcompiler.h>
-
 #include <d3dx11effect.h>
+
+#define DIRECTINPUT_VERSION 0x0800
+#include <dinput.h>

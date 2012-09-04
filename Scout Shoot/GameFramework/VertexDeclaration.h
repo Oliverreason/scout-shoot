@@ -3,7 +3,7 @@
 
 namespace kXNA
 {
-    class VertexDeclaration
+    class _kXNA VertexDeclaration
     {
     public:
         VertexDeclaration(D3D11_INPUT_ELEMENT_DESC arrInputDesc [], UINT numElements, ID3DX11Effect* pEffect, std::string strTechniqueName, ID3D11Device* pD3D11Device);

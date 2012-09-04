@@ -3,7 +3,7 @@
 
 namespace kXNA
 {
-    class GameTime
+    class _kXNA GameTime
     {
     public:
         GameTime(void);

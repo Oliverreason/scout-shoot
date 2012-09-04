@@ -1,3 +1,5 @@
+#include "kXNA_Dll.h"
+#include "GameFrameworkExport.h"
 #include "Color.h"
 
 using namespace kXNA;

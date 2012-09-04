@@ -1,9 +1,12 @@
+#include "kXNA_Dll.h"
+#include "GameFrameworkExport.h"
 #include "GameWin.h"
 #include "GameTime.h"
 #include "ContentManager.h"
 #include "GameComponent.h"
 #include "DrawableGameComponent.h"
 #include "GraphicsDevice.h"
+#include "Keyboard.h"
 
 LRESULT CALLBACK WndProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam )
 {
@@ -52,7 +55,6 @@ GameWin::GameWin(HINSTANCE hInstance, int nCmdShow, const tchar charArrWinTitle 
     m_dwTimeLastUpdate = 0;
 }
 
-
 GameWin::~GameWin(void)
 {
     delete m_pContent;
@@ -85,6 +87,10 @@ void GameWin::Initialize(void)
     if( FAILED( InitWindow( m_hInst, m_nCmdWinShow, m_strWinTitle.c_str()) || FAILED( InitDevice())))
         return;
 
+    if(FAILED( DirectInput8Create( m_hInst, DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&m_dxInputObject, 0 )))
+        return;
+    Keyboard::GetInstance()->Initialize(m_dxInputObject, m_hWnd);
+
     m_pContent = new ContentManager( GetGraphicsDevice());
 
     if (GetComponents().size() > 0)
@@ -108,6 +114,10 @@ void GameWin::UnloadContent(void)
 
 void GameWin::Finalize(void)
 {
+    if(m_dxInputObject) 
+        m_dxInputObject->Release( );
+    m_dxInputObject = 0;
+
     if (GetComponents().size() > 0)
     {
         for (std::vector<GameComponent*>::iterator iter = GetComponents().begin(); iter != GetComponents().end(); ++iter)

@@ -15,13 +15,14 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -37,14 +38,31 @@
     <IncludePath>$(DXSDK_DIR)Samples\C++\Effects11\Inc;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(DXSDK_DIR)Samples\C++\Effects11\Inc;$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Lib>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>dinput8.lib;dxguid.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>Effects11d.lib;dxerr.lib;d3d11.lib;d3dx11d.lib;d3dcompiler.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Link>
+      <AdditionalDependencies>dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>dinput8.lib;dxguid.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -52,11 +70,14 @@
     <ClInclude Include="ContentManager.h" />
     <ClInclude Include="DrawableGameComponent.h" />
     <ClInclude Include="GameComponent.h" />
-    <ClInclude Include="GameFrameworkHeader.h" />
+    <ClInclude Include="GameFrameworkExport.h" />
     <ClInclude Include="GameTime.h" />
     <ClInclude Include="GameWin.h" />
     <ClInclude Include="GraphicsDevice.h" />
     <ClInclude Include="IndexBuffer.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="KeyboardState.h" />
+    <ClInclude Include="kXNA_Dll.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="std.h" />
     <ClInclude Include="VertexBuffer.h" />
@@ -71,6 +92,8 @@
     <ClCompile Include="GameWin.cpp" />
     <ClCompile Include="GraphicsDevice.cpp" />
     <ClCompile Include="IndexBuffer.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="KeyboardState.cpp" />
     <ClCompile Include="Model.cpp" />
     <ClCompile Include="VertexBuffer.cpp" />
     <ClCompile Include="VertexDeclaration.cpp" />

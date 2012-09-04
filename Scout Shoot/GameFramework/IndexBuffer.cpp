@@ -1,3 +1,5 @@
+#include "kXNA_Dll.h"
+#include "GameFrameworkExport.h"
 #include "IndexBuffer.h"
 #include "GraphicsDevice.h"
 #include "VertexDeclaration.h"

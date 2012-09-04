@@ -6,7 +6,7 @@ namespace kXNA
     class GraphicsDevice;
     class VertexDeclaration;
 
-    class VertexBuffer
+    class _kXNA VertexBuffer
     {
     public:
         VertexBuffer(GraphicsDevice* pGraphicsDevice, int iVertexSize, VertexDeclaration* pVertexDeclaration, D3D_PRIMITIVE_TOPOLOGY enumVertexTopology);

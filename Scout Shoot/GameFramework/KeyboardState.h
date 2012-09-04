@@ -1,0 +1,130 @@
+#pragma once
+#include "std.h"
+
+namespace kXNA
+{
+    enum Keys
+    {
+        Escape = DIK_ESCAPE,
+        NumPad1 = DIK_NUMPAD1,
+        NumPad2 = DIK_NUMPAD2,
+        NumPad3 = DIK_NUMPAD3,
+        NumPad4 = DIK_NUMPAD4,
+        NumPad5 = DIK_NUMPAD5,
+        NumPad6 = DIK_NUMPAD6,
+        NumPad7 = DIK_NUMPAD7,
+        NumPad8 = DIK_NUMPAD8,
+        NumPad9 = DIK_NUMPAD9,
+        NumPad0 = DIK_NUMPAD0,
+        OemMinus = DIK_MINUS,
+        Back = DIK_BACK,
+        Tab = DIK_TAB,
+        Q = DIK_Q,
+        W = DIK_W,
+        E = DIK_E,
+        R = DIK_R,
+        T = DIK_T,
+        Y = DIK_Y,
+        U = DIK_U,
+        I = DIK_I,
+        O = DIK_O,
+        P = DIK_P,
+        OemOpenBrackets = DIK_LBRACKET,
+        OemCloseBrackets = DIK_RBRACKET,
+        LeftControl = DIK_LCONTROL,
+        A = DIK_A,
+        S = DIK_S,
+        D = DIK_D,
+        F = DIK_F,
+        G = DIK_G,
+        H = DIK_H,
+        J = DIK_J,
+        K = DIK_K,
+        L = DIK_L,
+        OemSemicolon = DIK_SEMICOLON,
+        LeftShift = DIK_LSHIFT,
+        OemBackslash = DIK_BACKSLASH,
+        Z = DIK_Z,
+        X = DIK_X,
+        C = DIK_C,
+        V = DIK_V,
+        B = DIK_B,
+        N = DIK_N,
+        M = DIK_M,
+        OemComma = DIK_COMMA,
+        RightShift = DIK_RSHIFT,
+        Multiply = DIK_MULTIPLY,
+        Space = DIK_SPACE,
+        CapsLock = DIK_CAPITAL,
+        F1 = DIK_F1,
+        F2 = DIK_F2,
+        F3 = DIK_F3,
+        F4 = DIK_F4,
+        F5 = DIK_F5,
+        F6 = DIK_F6,
+        F7 = DIK_F7,
+        F8 = DIK_F8,
+        F9 = DIK_F9,
+        F10 = DIK_F10,
+        F11 = DIK_F11,
+        F12 = DIK_F12,
+        F13 = DIK_F13,
+        F14 = DIK_F14,
+        F15 = DIK_F15,
+        NumLock = DIK_NUMLOCK,
+        Scroll = DIK_SCROLL,
+        Subtract = DIK_SUBTRACT,
+        Add = DIK_ADD,
+        RightControl = DIK_RCONTROL,
+        VolumeMute = DIK_MUTE,
+        MediaPlayPause = DIK_PLAYPAUSE,
+        MediaStop = DIK_MEDIASTOP,
+        VolumeDown = DIK_VOLUMEDOWN,
+        VolumeUp = DIK_VOLUMEUP,
+        BrowserHome = DIK_WEBHOME,
+        Divide = DIK_DIVIDE,
+        Pause = DIK_PAUSE,
+        RightAlt = DIK_RMENU,
+        LeftAlt = DIK_LMENU,
+        Home = DIK_HOME,
+        Up = DIK_UP,
+        PageUp = DIK_PRIOR,
+        Left = DIK_LEFT,
+        Right = DIK_RIGHT,
+        End =  DIK_END,
+        Down =  DIK_DOWN,
+        Insert = DIK_INSERT,
+        Delete = DIK_DELETE,
+        LeftWindows = DIK_LWIN,
+        RightWindows = DIK_RWIN,
+        Apps = DIK_APPS,
+        Sleep = DIK_SLEEP,
+        BrowserSearch = DIK_WEBSEARCH,
+        BrowserFavorites = DIK_WEBFAVORITES,
+        BrowserRefresh = DIK_WEBREFRESH,
+        BrowserStop = DIK_WEBSTOP,
+        BrowserForward = DIK_WEBFORWARD,
+        BrowserBack = DIK_WEBBACK,
+        LaunchMail = DIK_MAIL,
+        Kana = DIK_KANA,
+        ImeConvert = DIK_CONVERT,
+        ImeNoConvert = DIK_NOCONVERT,
+        Kanji = DIK_KANJI,
+    };
+    
+    class _kXNA KeyboardState
+    {
+    public:
+        KeyboardState(const LPDIRECTINPUTDEVICE8& keyboardDevice);
+        ~KeyboardState(void);
+
+        bool IsKeyDown(Keys key);
+        bool IsKeyUp(Keys key);
+
+        bool GetItem(Keys key);
+
+    private:
+        char m_KeyboardKeys[256];
+    };
+}
+

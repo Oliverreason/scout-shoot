@@ -1,6 +1,5 @@
 #pragma once
 #include "std.h"
-//#include "Resource.h"
 
 namespace kXNA
 {
@@ -8,8 +7,10 @@ namespace kXNA
     class ContentManager;
     class GraphicsDevice;
     class GameTime;
+    class Keyboard;
+    class KeyboardState;
 
-    class GameWin
+    class _kXNA GameWin
     {
     public:
         GameWin( HINSTANCE hInstance, int nCmdShow, const tchar charArrWinTitle []);
@@ -43,6 +44,8 @@ namespace kXNA
         HINSTANCE m_hInst;
         int m_nCmdWinShow;
         HWND m_hWnd;
+
+        LPDIRECTINPUT8 m_dxInputObject;
 
         DWORD m_dwTimeStart;
         DWORD m_dwTimeLastUpdate;

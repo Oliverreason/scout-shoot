@@ -6,7 +6,7 @@ namespace kXNA
     class GraphicsDevice;
     class VertexDeclaration;
 
-    class IndexBuffer
+    class _kXNA IndexBuffer
     {
     public:
         IndexBuffer(GraphicsDevice* pGraphicsDevice, int iVertexSize, DXGI_FORMAT enumFormat);

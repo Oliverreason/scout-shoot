@@ -5,7 +5,7 @@ namespace kXNA
 {
     class GraphicsDevice;
 
-    class ContentManager
+    class _kXNA ContentManager
     {
     public:
         ContentManager(GraphicsDevice* pGraphicsDevice);
