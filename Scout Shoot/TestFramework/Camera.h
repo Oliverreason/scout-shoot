@@ -37,7 +37,13 @@ private:
     XMMATRIX m_matView;
     XMMATRIX m_matProjection;
     XMVECTOR m_vecCameraPosition;
+
     XMVECTOR m_vecCameraDirection;
     XMVECTOR m_vecCameraUp;
+    FLOAT currentPitch;
+    FLOAT currentYaw;
+    //MouseState prevMouseState;
+    FLOAT totalPitch;
+    FLOAT totalYaw;
 };
 

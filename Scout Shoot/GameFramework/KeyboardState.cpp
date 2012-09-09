@@ -6,8 +6,18 @@ using namespace kXNA;
 KeyboardState::KeyboardState(const LPDIRECTINPUTDEVICE8& keyboardDevice)
 {
     ZeroMemory(m_KeyboardKeys, sizeof(m_KeyboardKeys));
+    HRESULT hr;
+    while (true)
+    {
+        if ( SUCCEEDED( hr = keyboardDevice->GetDeviceState(sizeof(m_KeyboardKeys), (LPVOID)&m_KeyboardKeys)) )
+            break;
 
-    keyboardDevice->GetDeviceState(sizeof(m_KeyboardKeys), (LPVOID)&m_KeyboardKeys);
+        if ( hr != DIERR_INPUTLOST || hr != DIERR_NOTACQUIRED)
+            break;//failed
+
+        if ( FAILED(keyboardDevice->Acquire()) )
+            break;//failed
+    }
 }
 
 

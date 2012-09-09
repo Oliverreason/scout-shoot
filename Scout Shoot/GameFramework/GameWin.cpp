@@ -7,6 +7,7 @@
 #include "DrawableGameComponent.h"
 #include "GraphicsDevice.h"
 #include "Keyboard.h"
+#include "Mouse.h"
 
 LRESULT CALLBACK WndProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam )
 {
@@ -89,7 +90,9 @@ void GameWin::Initialize(void)
 
     if(FAILED( DirectInput8Create( m_hInst, DIRECTINPUT_VERSION, IID_IDirectInput8, (void**)&m_dxInputObject, 0 )))
         return;
+
     Keyboard::GetInstance()->Initialize(m_dxInputObject, m_hWnd);
+    Mouse::GetInstance()->Initialize(m_dxInputObject, m_hWnd);
 
     m_pContent = new ContentManager( GetGraphicsDevice());
 
