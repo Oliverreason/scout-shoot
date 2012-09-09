@@ -64,6 +64,12 @@
     <ClInclude Include="GameFrameworkExport.h">
       <Filter>Framework</Filter>
     </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>Framework\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseState.h">
+      <Filter>Framework\Input</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VertexBuffer.cpp">
@@ -103,6 +109,12 @@
       <Filter>Framework\Input</Filter>
     </ClCompile>
     <ClCompile Include="Keyboard.cpp">
+      <Filter>Framework\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>Framework\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseState.cpp">
       <Filter>Framework\Input</Filter>
     </ClCompile>
   </ItemGroup>
