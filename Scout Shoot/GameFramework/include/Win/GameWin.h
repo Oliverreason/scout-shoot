@@ -10,6 +10,9 @@ namespace kXNA
     class Keyboard;
     class KeyboardState;
 
+    template class _kXNA std::allocator<GameComponent*>;
+    template class _kXNA std::vector<GameComponent*, std::allocator<GameComponent*>>;
+
     class _kXNA GameWin
     {
     public:

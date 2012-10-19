@@ -1,7 +1,7 @@
 #include "kXNA_Dll.h"
 #include "GameFrameworkExport.h"
 #include "VertexBuffer.h"
-#include "GraphicsDevice.h"
+#include "Win/GraphicsDevice.h"
 #include "VertexDeclaration.h"
 
 using namespace kXNA;

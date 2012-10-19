@@ -1,4 +1,7 @@
 #include "Camera.h"
+#include "Mouse.h"
+#include "MouseState.h"
+#include "MathHelper.h"
 
 using namespace kXNA;
 Camera::Camera(GameWin* pGame, XMVECTOR vecCameraPosition, XMVECTOR vecCameraTarget, XMVECTOR vecCameraUp)
@@ -35,9 +38,21 @@ void Camera::CreatePerspectiveFieldOfViewProjectionMatrix(FLOAT fFieldOfView
 void Camera::Initialize()
 {
     GameComponent::Initialize();
+
+    HWND hWnd = GetGame()->GetWindow();
+    RECT rectClient;
+    GetClientRect(hWnd, &rectClient);
+    Mouse::GetInstance()->SetPosition((rectClient.right - rectClient.left)/2
+        , (rectClient.bottom - rectClient.top)/2 );
 }
 
 void Camera::Update(GameTime gameTime)
 {
     GameComponent::Update(gameTime);
+
+    FLOAT yawAngle = (-MathHelper::PiOver4 / 150) * (Mouse::GetInstance()->GetState()).GetX();
+    //if (fabs(currentYaw + yawAngle) < totalYaw)
+    //{
+    //    m_vecCameraDirection = m_vecCameraDirection * XMMATRIX.
+    //}
 }

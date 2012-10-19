@@ -1,121 +1,133 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Framework">
+    <Filter Include="Include">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Framework\Graphics">
-      <UniqueIdentifier>{4b91e5a2-5511-4577-8de1-d658406a2974}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Content">
-      <UniqueIdentifier>{cd4680f5-065b-48bf-873a-bcc57559d216}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Framework\Input">
-      <UniqueIdentifier>{5ae77d52-a513-4642-b160-be79edc97418}</UniqueIdentifier>
+    <Filter Include="src">
+      <UniqueIdentifier>{2d2addc0-bc6a-44bb-82a0-fbc06d93e9c8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameComponent.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
-    <ClInclude Include="GameTime.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
-    <ClInclude Include="GameWin.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
-    <ClInclude Include="std.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
-    <ClInclude Include="DrawableGameComponent.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
-    <ClInclude Include="VertexBuffer.h">
-      <Filter>Framework\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="VertexDeclaration.h">
-      <Filter>Framework\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="Model.h">
-      <Filter>Framework\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphicsDevice.h">
-      <Filter>Framework\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="ContentManager.h">
-      <Filter>Framework\Content</Filter>
-    </ClInclude>
-    <ClInclude Include="IndexBuffer.h">
-      <Filter>Framework\Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyboardState.h">
-      <Filter>Framework\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="Keyboard.h">
-      <Filter>Framework\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="kXNA_Dll.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
-    <ClInclude Include="GameFrameworkExport.h">
-      <Filter>Framework</Filter>
-    </ClInclude>
-    <ClInclude Include="Mouse.h">
-      <Filter>Framework\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="MouseState.h">
-      <Filter>Framework\Input</Filter>
-    </ClInclude>
+    <ClCompile Include="src\Color.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ContentManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DrawableGameComponent.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameComponent.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameTime.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IndexBuffer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Keyboard.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KeyboardState.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MathHelper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Matrix.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Mouse.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MouseState.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OgreVector3.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VertexBuffer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VertexDeclaration.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Win\GameWin.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Win\GraphicsDevice.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="VertexBuffer.cpp">
-      <Filter>Framework\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="VertexDeclaration.cpp">
-      <Filter>Framework\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Model.cpp">
-      <Filter>Framework\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsDevice.cpp">
-      <Filter>Framework\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="ContentManager.cpp">
-      <Filter>Framework\Content</Filter>
-    </ClCompile>
-    <ClCompile Include="Color.cpp">
-      <Filter>Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="GameWin.cpp">
-      <Filter>Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="DrawableGameComponent.cpp">
-      <Filter>Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="GameComponent.cpp">
-      <Filter>Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="GameTime.cpp">
-      <Filter>Framework</Filter>
-    </ClCompile>
-    <ClCompile Include="IndexBuffer.cpp">
-      <Filter>Framework\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyboardState.cpp">
-      <Filter>Framework\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="Keyboard.cpp">
-      <Filter>Framework\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="Mouse.cpp">
-      <Filter>Framework\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="MouseState.cpp">
-      <Filter>Framework\Input</Filter>
-    </ClCompile>
+    <ClInclude Include="include\Color.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ContentManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DrawableGameComponent.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameComponent.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameFrameworkExport.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameTime.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IndexBuffer.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Keyboard.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\KeyboardState.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\kXNA_Dll.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MathHelper.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Matrix.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Model.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Mouse.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MouseState.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\OgreVector3.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\std.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VertexBuffer.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VertexDeclaration.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Win\GameWin.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Win\GraphicsDevice.h">
+      <Filter>Include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

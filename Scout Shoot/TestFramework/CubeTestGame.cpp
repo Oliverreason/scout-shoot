@@ -1,5 +1,11 @@
 #include "CubeTestGame.h"
-#include "GameFrameworkHeader.h"
+
+#include "Color.h"
+#include "GameTime.h"
+#include "ContentManager.h"
+#include "Win/GameWin.h"
+#include "Win/GraphicsDevice.h"
+#include "VertexDeclaration.h"
 
 struct CubeTestGameVertexFormat
 {

@@ -2,7 +2,7 @@
 #include "GameFrameworkExport.h"
 #include "GameComponent.h"
 #include "GameTime.h"
-#include "GameWin.h"
+#include "Win/GameWin.h"
 
 using namespace kXNA;
 GameComponent::GameComponent(GameWin* pGame)
