@@ -1,7 +1,7 @@
 #pragma once
 #include "stdApp.h"
 
-#include "GameWin.h"
+#include "Win/GameWin.h"
 
 #include "VertexBuffer.h"
 #include "IndexBuffer.h"

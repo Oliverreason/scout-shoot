@@ -10,6 +10,49 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Color.cpp" />
+    <ClCompile Include="src\ContentManager.cpp" />
+    <ClCompile Include="src\DrawableGameComponent.cpp" />
+    <ClCompile Include="src\GameComponent.cpp" />
+    <ClCompile Include="src\GameTime.cpp" />
+    <ClCompile Include="src\IndexBuffer.cpp" />
+    <ClCompile Include="src\Keyboard.cpp" />
+    <ClCompile Include="src\KeyboardState.cpp" />
+    <ClCompile Include="src\MathHelper.cpp" />
+    <ClCompile Include="src\Matrix.cpp" />
+    <ClCompile Include="src\Model.cpp" />
+    <ClCompile Include="src\Mouse.cpp" />
+    <ClCompile Include="src\MouseState.cpp" />
+    <ClCompile Include="src\OgreVector3.cpp" />
+    <ClCompile Include="src\VertexBuffer.cpp" />
+    <ClCompile Include="src\VertexDeclaration.cpp" />
+    <ClCompile Include="src\Win\GameWin.cpp" />
+    <ClCompile Include="src\Win\GraphicsDevice.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Color.h" />
+    <ClInclude Include="include\ContentManager.h" />
+    <ClInclude Include="include\DrawableGameComponent.h" />
+    <ClInclude Include="include\GameComponent.h" />
+    <ClInclude Include="include\GameFrameworkExport.h" />
+    <ClInclude Include="include\GameTime.h" />
+    <ClInclude Include="include\IndexBuffer.h" />
+    <ClInclude Include="include\Keyboard.h" />
+    <ClInclude Include="include\KeyboardState.h" />
+    <ClInclude Include="include\kXNA_Dll.h" />
+    <ClInclude Include="include\MathHelper.h" />
+    <ClInclude Include="include\Matrix.h" />
+    <ClInclude Include="include\Model.h" />
+    <ClInclude Include="include\Mouse.h" />
+    <ClInclude Include="include\MouseState.h" />
+    <ClInclude Include="include\OgreVector3.h" />
+    <ClInclude Include="include\std.h" />
+    <ClInclude Include="include\VertexBuffer.h" />
+    <ClInclude Include="include\VertexDeclaration.h" />
+    <ClInclude Include="include\Win\GameWin.h" />
+    <ClInclude Include="include\Win\GraphicsDevice.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{21735B35-5988-A1DD-AAFA-9D7C36209522}</ProjectGuid>
   </PropertyGroup>
@@ -47,6 +90,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>dinput8.lib;dxguid.lib</AdditionalDependencies>
@@ -65,43 +109,6 @@
       <AdditionalDependencies>dinput8.lib;dxguid.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="Color.h" />
-    <ClInclude Include="ContentManager.h" />
-    <ClInclude Include="DrawableGameComponent.h" />
-    <ClInclude Include="GameComponent.h" />
-    <ClInclude Include="GameFrameworkExport.h" />
-    <ClInclude Include="GameTime.h" />
-    <ClInclude Include="GameWin.h" />
-    <ClInclude Include="GraphicsDevice.h" />
-    <ClInclude Include="IndexBuffer.h" />
-    <ClInclude Include="Keyboard.h" />
-    <ClInclude Include="KeyboardState.h" />
-    <ClInclude Include="kXNA_Dll.h" />
-    <ClInclude Include="Model.h" />
-    <ClInclude Include="Mouse.h" />
-    <ClInclude Include="MouseState.h" />
-    <ClInclude Include="std.h" />
-    <ClInclude Include="VertexBuffer.h" />
-    <ClInclude Include="VertexDeclaration.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Color.cpp" />
-    <ClCompile Include="ContentManager.cpp" />
-    <ClCompile Include="DrawableGameComponent.cpp" />
-    <ClCompile Include="GameComponent.cpp" />
-    <ClCompile Include="GameTime.cpp" />
-    <ClCompile Include="GameWin.cpp" />
-    <ClCompile Include="GraphicsDevice.cpp" />
-    <ClCompile Include="IndexBuffer.cpp" />
-    <ClCompile Include="Keyboard.cpp" />
-    <ClCompile Include="KeyboardState.cpp" />
-    <ClCompile Include="Model.cpp" />
-    <ClCompile Include="Mouse.cpp" />
-    <ClCompile Include="MouseState.cpp" />
-    <ClCompile Include="VertexBuffer.cpp" />
-    <ClCompile Include="VertexDeclaration.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

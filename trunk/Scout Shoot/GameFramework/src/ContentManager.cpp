@@ -1,7 +1,7 @@
 #include "kXNA_Dll.h"
 #include "GameFrameworkExport.h"
 #include "ContentManager.h"
-#include "GraphicsDevice.h"
+#include "Win/GraphicsDevice.h"
 
 using namespace kXNA;
 ContentManager::ContentManager(GraphicsDevice* pGraphicsDevice)
