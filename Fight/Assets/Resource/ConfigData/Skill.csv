@@ -1,0 +1,3 @@
+SkillId,SkillStatesId,HitAnimatorStateId,SuccessiveSkillId,Damage
+技能编号,技能状态编号 输入多个用|分割,被技能击中后的动画状态Id,后续技能Id,基础伤害数值
+int,string,int,int,int
