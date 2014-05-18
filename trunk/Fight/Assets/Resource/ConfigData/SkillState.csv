@@ -1,0 +1,3 @@
+SkillStatesId	SkillStateDuration	AnimatorStateId	StateType	InitiativeBreakType	InitiativeBreakData	PassiveBreakType	PassiveBreakData
+技能状态编号	技能状态持续秒数	关联的动画状态Id	技能状态类型 0吟唱 1发动 2击中 3收招	主动中断类型 0不允许	主动中断数据 使用|分割	被动中断类型 0不允许	被动中断数据 使用|分割
+int	int	int	int	int	string	int	string
